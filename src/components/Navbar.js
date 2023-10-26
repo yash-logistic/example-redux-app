@@ -11,10 +11,9 @@ function Navbar() {
       <Link to="/add-product" className="ml-4">
         Add Product
       </Link>
-      <Link to="/list" className="ml-4">
+      <Link to="/list" className="ml-4 mr-16">
         Product List
       </Link>
-      
     </div>
   );
 }
