@@ -148,7 +148,7 @@ function ProductList() {
       </div>
 
       <div className="mb-4">
-        <label>Rating Range:</label>
+        <label>Rating :</label>
         <select
           value={selectedRatingRange}
           onChange={(e) => handleRatingRangeChange(e.target.value)}
