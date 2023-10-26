@@ -115,10 +115,10 @@ function ProductList() {
           <label>
             <input
               type="checkbox"
-              checked={isCategorySelected("jewellery")}
-              onChange={() => handleCategoryChange("jewellery")}
+              checked={isCategorySelected("household")}
+              onChange={() => handleCategoryChange("household")}
             />
-            jewellery
+            household
           </label>
           <label>
             <input
