@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 import { selectAllProducts } from "../features/productSlice";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function ProductCard({ product, onAddToCart }) {
   return (
     <div className="mt-5 max-w-sm mx-auto bg-white rounded-xl shadow-md overflow-hidden border border-gray-300">
@@ -31,6 +32,10 @@ function ProductList() {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
+    toast.success("Product added to cart", {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 3000,
+    });
   };
 
   const handleSearch = (e) => {
@@ -171,6 +176,7 @@ function ProductList() {
           />
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 }

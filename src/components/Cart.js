@@ -5,6 +5,8 @@ import {
   selectCart,
   selectCartTotalPrice,
 } from "../features/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Cart() {
   const cart = useSelector(selectCart);
@@ -13,6 +15,10 @@ function Cart() {
 
   const handleRemoveFromCart = (productId) => {
     dispatch(removeFromCart(productId));
+    toast.success("Product removed from cart", {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 3000,
+    });
   };
 
   return (
@@ -40,6 +46,7 @@ function Cart() {
       <div className="mt-4 text-xl font-semibold">
         Total Price: ${totalPrice}
       </div>
+      <ToastContainer />
     </div>
   );
 }
