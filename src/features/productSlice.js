@@ -106,14 +106,14 @@ const initialState = {
       name: "dolphy black dumbbells",
       price: 5500,
       category: "sports",
-      rating: 6,
+      rating: 3,
     },
     {
       id: 16,
       name: "adidas cast iron hexagonal dumbbells",
       price: 3000,
       category: "sports",
-      rating: 6,
+      rating: 3,
     },
 
     {
@@ -121,7 +121,7 @@ const initialState = {
       name: "hercules fitness air bike",
       price: 17000,
       category: "sports",
-      rating: 6,
+      rating: 3,
     },
     {
       id: 18,
